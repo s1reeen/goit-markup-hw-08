@@ -63,3 +63,8 @@ body {
 .portfolio-txt {
     color: var(--color-blackgray);
 }
+
+.portfolio-button:focus {
+    background-color: #2196F3;
+    color: var(--color-white);
+}
