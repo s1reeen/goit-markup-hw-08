@@ -1,0 +1,88 @@
+:root {
+    --color-gray: #757575;
+    --color-blackgray: #212121;
+    --color-blue: #2196F3;
+    --color-black: #000;
+    --color-gray2: #2F303A;
+    --color-white: #fff;
+    --color-brand: #F5F5F5;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: var(--color-white);
+}
+
+.top-nav-li-1 {
+    color: var(--color-gray);
+    text-decoration: none;
+}
+
+.top-nav-li-1:hover {
+    color: var(--color-blue);
+}
+
+.top-nav-li {
+    color: var(--color-blackgray);
+    text-decoration: none;
+}
+
+.top-nav-li:hover {
+    color: var(--color-blue);
+} 
+
+.top-section {
+    background-color: var(--color-gray2);
+    color: var(--color-white);
+}
+
+.top-section-button {
+    color: var(--color-white);
+    background-color: var(--color-blue);
+}
+
+.top-section-button:hover {
+    background-color: #237bc4;
+}
+
+footer {
+    background-color: var(--color-gray2);
+}
+
+.foot-ul-map {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.foot-ul-li {
+    color: var(--color-gray);
+    text-decoration: none;
+}
+
+.foot-ul-li:hover {
+    color: var(--color-blue);
+}
+
+ul {
+    list-style: none;
+}
+
+.team {
+    background-color: var(--color-brand);
+}
+
+.team-color {
+    background-color: var(--color-white);
+}
+
+.our-benefits-p {
+    color: var(--color-gray);
+}
+
+.our-benefits-h3 {
+    color: var(--color-blackgray);
+}
+
