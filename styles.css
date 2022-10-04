@@ -16,35 +16,62 @@ header {
     background-color: var(--color-white);
 }
 
-.top-nav-li-1 {
+.contacts {
     color: var(--color-gray);
     text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
 }
 
-.top-nav-li-1:hover {
+.contacts:hover {
     color: var(--color-blue);
 }
 
-.top-nav-li {
+.contacts:focus {
+    color: var(--color-blue);
+}
+
+.nav-link {
     color: var(--color-blackgray);
     text-decoration: none;
 }
 
-.top-nav-li:hover {
+.nav-link:hover {
     color: var(--color-blue);
 } 
 
-.top-section {
-    background-color: var(--color-gray2);
+.nav-link:focus {
+    color: var(--color-blue);
+}
+
+.title {
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
     color: var(--color-white);
 }
 
-.top-section-button {
+.main-button {
     color: var(--color-white);
     background-color: var(--color-blue);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    font-family: 'Roboto';
+     font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    display: flex;
+    letter-spacing: 0.06em;
 }
 
-.top-section-button:hover {
+.main-button:hover {
     background-color: #237bc4;
 }
 
@@ -52,17 +79,23 @@ footer {
     background-color: var(--color-gray2);
 }
 
-.foot-ul-map {
+.map {
     color: var(--color-white);
     text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
 }
 
-.foot-ul-li {
+.contacts {
     color: var(--color-gray);
     text-decoration: none;
 }
 
-.foot-ul-li:hover {
+.contacts:hover {
     color: var(--color-blue);
 }
 
@@ -78,10 +111,132 @@ ul {
     background-color: var(--color-white);
 }
 
-.our-benefits-p {
+.benefits-txt {
+    color: var(--color-gray);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.benefits-title {
+    color: var(--color-blackgray);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.portfolio-button {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--color-blackgray);
+}
+
+.portfolio-button:hover {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+}
+
+.portfolio-button:focus {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+}                      
+
+.top-logo {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.26;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+.top-logo-color {
+    color: var(--color-blue);
+}
+
+.main-title {
+    background-color: var(--color-gray2);
+}
+
+.title-middle {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    color: var(--color-blackgray);
+}
+
+.member-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;   
+    letter-spacing: 0.03em;
+    color: var(--color-blackgray);
+}
+
+.member-txt {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
     color: var(--color-gray);
 }
 
-.our-benefits-h3 {
+.logo-footer {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.logo-footer-color {
+    color: var(--color-blue);
+}
+
+.foot-contacts {
+    font-style: normal;
+}
+
+.portfolio-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
     color: var(--color-blackgray);
+}
+
+.portfolio-txt {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+     color: var(--color-gray);
 }
