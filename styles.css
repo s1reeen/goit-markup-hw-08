@@ -8,13 +8,28 @@
     --color-brand: #F5F5F5;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 header {
     background-color: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1600px;
+    height: 80px;
 }
+
 
 .contacts {
     color: var(--color-gray);
@@ -37,6 +52,8 @@ header {
 .nav-link {
     color: var(--color-blackgray);
     text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .nav-link:hover {
@@ -48,35 +65,55 @@ header {
 }
 
 .title {
-    font-family: 'Roboto';
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--color-white);
-}
+    text-align: center;
+    position: absolute;
+    max-width: 696px;
+    height: 120px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 696px;
+    margin-bottom: 100px;
 
+
+}
 .main-button {
     color: var(--color-white);
     background-color: var(--color-blue);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    width: 216px;
+    height: 50px;
     cursor: pointer;
-    font-family: 'Roboto';
-     font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    display: flex;
-    letter-spacing: 0.06em;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin-top: 100px;
 }
-
 .main-button:hover {
     background-color: #237bc4;
 }
 
 footer {
     background-color: var(--color-gray2);
+}
+
+.footer-links {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-item {
+    margin-bottom: 9px;
+}
+
+.footer-list {
+    margin-left: 75px;
+    margin-top: 20px;
 }
 
 .map {
@@ -88,6 +125,7 @@ footer {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+    margin-top: 60px;
 }
 
 .contacts {
@@ -103,12 +141,40 @@ ul {
     list-style: none;
 }
 
-.team {
+.team-web {
     background-color: var(--color-brand);
+    width: 1600px;
+    height: 648px;
+}
+
+.section-team {
+    display: flex;
+    justify-content: center;
+}
+
+
+.team {
+    gap: 30px;
+    display: flex;
+    margin-top: 100px;
+    text-align: center;
 }
 
 .team-color {
     background-color: var(--color-white);
+    width: 270px;
+    height: 368px;
+}
+
+.container-card {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    text-align: center;
+    padding: 30px, 30px;
+}
+
+.team .member-txt {
+    line-height: 0.8;
 }
 
 .benefits-txt {
@@ -119,9 +185,10 @@ ul {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+    max-width: 270px;
 }
 
-.benefits-title {
+.benefits-title .what-we-do {
     color: var(--color-blackgray);
     font-family: 'Roboto';
     font-style: normal;
@@ -137,10 +204,14 @@ ul {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 1.6;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--color-blackgray);
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 .portfolio-button:hover {
@@ -162,7 +233,9 @@ ul {
     letter-spacing: 0.03em;
     text-decoration: none;
     color: var(--color-black);
+    margin-left: 100px;
 }
+
 
 .top-logo-color {
     color: var(--color-blue);
@@ -170,7 +243,15 @@ ul {
 
 .main-title {
     background-color: var(--color-gray2);
+    display: flex;
+    padding: 94px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1600px;
+    height: 600px;
 }
+
 
 .title-middle {
     font-family: 'Roboto';
@@ -180,6 +261,21 @@ ul {
     line-height: 1.16;
     letter-spacing: 0.03em;
     color: var(--color-blackgray);
+    text-align: center;
+    padding-bottom: 0px;
+}
+
+.title-middle-A {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    color: var(--color-blackgray);
+    text-align: center;
+    margin-bottom: 50px;
+    padding-top: 50px;
 }
 
 .member-title {
@@ -190,6 +286,7 @@ ul {
     line-height: 1.18;   
     letter-spacing: 0.03em;
     color: var(--color-blackgray);
+    padding-top: 10px;
 }
 
 .member-txt {
@@ -200,6 +297,7 @@ ul {
     line-height: 1.18;
     letter-spacing: 0.03em;
     color: var(--color-gray);
+    text-align: center;
 }
 
 .logo-footer {
@@ -211,6 +309,7 @@ ul {
     letter-spacing: 0.03em;
     color: var(--color-white);
     text-decoration: none;
+    margin-left: 75px;
 }
 
 .logo-footer-color {
@@ -229,6 +328,10 @@ ul {
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--color-blackgray);
+    margin-top: 0px;
+    margin-bottom: 4px;
+    padding-left: 24px;
+    padding-right: 4px;
 }
 
 .portfolio-txt {
@@ -239,4 +342,147 @@ ul {
     line-height: 30px;
     letter-spacing: 0.03em;
      color: var(--color-gray);
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+
+.contacts-list {
+    display: flex;
+    gap: 40px;
+    margin-left: auto;
+    padding-right: 213px;
+    
+}
+
+.top-navigation {
+    display: flex;
+    margin-left: 93px ;
+}
+
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    max-width: 270px;
+    height: 72px;
+}
+
+.container {
+    position: absolute;
+    width: 1200px;
+    height: 98px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.our-benefits {
+    padding-bottom: 0px;
+    padding-top: 94px;
+    display: flex;
+
+}
+
+
+.features-list {
+    display: flex;
+    gap: 30px;
+    margin: auto;
+}
+
+
+.what-we-do {
+    text-align: center;
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+
+.features-images {
+    margin-top: 34px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.container-class {
+    background-color: var(--color-white);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    text-align: center;
+}
+
+.buttons-filter {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.button {
+    padding: 6px 22px;
+    font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: center;
+        letter-spacing: 0.03em;
+        border-radius: 4px;
+        cursor: pointer;
+}
+
+button {
+    border: none;
+    border-radius: 4px;
+}
+
+    .gallery-card {
+    width: 370px;
+    height: 404px;   
+    background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+}
+
+.cards-list {
+    width: calc(100%-60px)/3;
+    margin-right: 30px ;
+    margin-bottom: 30px ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 56px;
+    margin-left: 165px;
+    margin-right: 165px;
+}
+
+.image-card {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.gallery-card:nth-child(3n) {
+    margin-right: 0px;
+}
+
+.gallery-card:nth-last-child(-n+3) {
+    margin-bottom: 0;
+}
+
+.gallery-card .portfolio-title {
+    margin: 0;
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    text-align: start;
 }
