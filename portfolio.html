@@ -14,24 +14,29 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <header>
-      <a class="top-logo" href="#"><span class="top-logo-color">Web</span>Studios</a>
-      <nav class="top-navigation">
-        <ul class="nav-links">
-          <li><a class="nav-link" href="./index.html">Студiя</a></li>
-          <li><a class="nav-link" href="./portfolio.html">Портфолiо</a></li>
-          <li><a class="nav-link" href="#">Контакти</a></li>
-        </ul>
-      </nav>
-      <ul class="contacts-list">
-        <li>
-          <a class="contacts" href="mailto:mailto:info@devstudio.com">info@devstudio.com</a>
-        </li>
-        <li><a class="contacts" href="tel:+380961111111">+38 096 111 11 11</a></li>
-      </ul>
+     <header>
+      <div class="container">
+        <div class="header-box">
+          <nav class="top-navigation">
+            <a class="top-logo" href="#"><span class="top-logo-color">Web</span>Studios</a>
+            <ul class="nav-links">
+              <li><a class="nav-link" href="./index.html">Студiя</a></li>
+              <li><a class="nav-link" href="./portfolio.html">Портфолiо</a></li>
+              <li><a class="nav-link" href="#">Контакти</a></li>
+            </ul>
+          </nav>
+          <ul class="contacts-list">
+            <li>
+              <a class="contacts" href="mailto:mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+            <li><a class="contacts" href="tel:+380961111111">+38 096 111 11 11</a></li>
+          </ul>
+        </div>
     </header>
     <main>
       <section class="section-cards">
+        <div class="container">
+          <h1 class="hidden-h1">Портфолио</h1>
         <ul class="buttons-filter">
           <li><button type="button" class="portfolio-button">Усi</button></li>
           <li><button type="button" class="portfolio-button">Веб-сайти</button></li>
@@ -42,6 +47,7 @@
         <ul class="cards-list">
           <li class="gallery-card">
             <img src="images/portfolio1.jpg" alt="Сайт технокряк" width="370" />
+            <div class="images-div">            
             <h2 class="portfolio-title">Технокряк</h2>
             <p class="portfolio-txt">Веб-сайт</p>
           </li>
@@ -52,8 +58,8 @@
               alt="Постер баскетбол"
               width="370"
             />
+            <div class="images-div">
             <h2 class="portfolio-title">Постер New Orlean vs Golden Star</h2>
-            y
             <p class="portfolio-txt">Дизайн</p>
           </li>
           <li class="gallery-card">
@@ -63,16 +69,19 @@
               alt="ресторан морепродуктiв"
               width="370"
             />
+            <div class="images-div">
             <h2 class="portfolio-title">Ресторан Seafood</h2>
             <p class="portfolio-txt">Додаток</p>
           </li>
           <li class="gallery-card">
             <img class="image-card" src="images/portfolio4.jpg" alt="Навушники" width="370" />
+            <div class="images-div">
             <h2 class="portfolio-title">Ресторан Prime</h2>
             <p class="portfolio-txt">Маркетинг</p>
           </li>
           <li class="gallery-card">
             <img class="image-card" src="images/portfolio5.jpg" alt="Коробки" width="370" />
+            <div class="images-div">
             <h2 class="portfolio-title">Проект Boxes</h2>
             <p class="portfolio-txt">Додаток</p>
           </li>
@@ -83,6 +92,7 @@
               alt="Сайт на монiторi"
               width="370"
             />
+            <div class="images-div">
             <h2 class="portfolio-title">Inspiration has no Borders</h2>
             <p class="portfolio-txt">Веб-сайт</p>
           </li>
@@ -93,11 +103,13 @@
               alt="Книжка limited edition"
               width="370"
             />
+            <div class="images-div">
             <h2 class="portfolio-title">Видання Limited Edition</h2>
             <p class="portfolio-txt">Дизайн</p>
           </li>
           <li class="gallery-card">
             <img class="image-card" src="images/portfolio8.jpg" alt="Ценник lab" width="370" />
+            <div class="images-div">
             <h2 class="portfolio-title">Проект LAB</h2>
             <p class="portfolio-txt">Маркетинг</p>
           </li>
@@ -108,35 +120,36 @@
               alt="сайт growing business на макбуцi"
               width="370"
             />
+            <div class="images-div">
             <h2 class="portfolio-title">Growing business</h2>
             <p class="portfolio-txt">Додаток</p>
           </li>
         </ul>
       </section>
     </main>
-    <footer>
-      <div class="footer-links">
-        <a class="logo-footer" href="#"><span class="logo-footer-color">Web</span>Studio</a>
-        <address class="foot-contacts">
-          <ul class="footer-list">
-            <li class="footer-item">
-              <a
-                class="map"
-                href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >м. Київ, пр-т Лесі Украінки, 26</a
-              >
-            </li>
-            <li class="footer-item">
-              <a class="contacts" href="mailto:info@devstudio.com">info@devstudio.com</a>
-            </li>
-            <li class="footer-item">
-              <a class="contacts" href="tel:+380961111111">+38 096 111 11 11</a>
-            </li>
-          </ul>
-        </address>
-      </div>
+     <footer>
+        <div class="container">
+          <a class="logo-footer" href="#"><span class="logo-footer-color">Web</span>Studio</a>
+          <address class="foot-contacts">
+            <ul class="footer-list">
+              <li class="footer-item">
+                <a
+                  class="map"
+                  href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >м. Київ, пр-т Лесі Украінки, 26</a
+                >
+              </li>
+              <li class="footer-item">
+                <a class="contacts" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              </li>
+              <li class="footer-item">
+                <a class="contacts" href="tel:+380961111111">+38 096 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
     </footer>
   </body>
 </html>
