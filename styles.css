@@ -20,8 +20,6 @@ body {
 
 header {
     border-bottom: 1px solid #ECECEC; 
-    max-width: 1600px;
-    margin: 0 auto;
 }
 
 .header-box {
@@ -92,6 +90,8 @@ header {
     background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    display: block;
+    margin: 0 auto;
 }
 .main-button:hover {
     background-color: #237bc4;
@@ -101,8 +101,6 @@ footer {
     background-color: var(--color-gray2);
     padding-top: 50px;
     padding-bottom: 50px;
-    max-width: 1600px;
-    margin: 0 auto;
 }
 
 .footer-item:not(:last-child) {
@@ -138,8 +136,6 @@ ul {
     padding-top: 94px;
     padding-bottom: 94px;
     background: #F5F4FA;
-    max-width: 1600px;
-    margin: 0 auto;
 }
 
 .section-team {
@@ -242,14 +238,12 @@ ul {
 .main-title {
     background-color: var(--color-gray2);
     display: flex;
-    padding: 94px 0;
+    padding: 200px 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 1600px;
     padding-top: 200px;
-    padding-top: 94px;
-    padding-bottom: 94px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -376,9 +370,8 @@ ul {
 
 .our-benefits {
     padding-bottom: 0px;
-    padding-top: 94px;
+    padding: 94px 0;
     display: flex;
-
 }
 
 
@@ -396,7 +389,6 @@ ul {
 }
 
 .features-images {
-    margin-top: 34px;
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -474,13 +466,11 @@ button {
     visibility: hidden;
 }
 
-image {
+img {
     display: block;
 }
 
 .section-cards {
-    max-width: 1600px;
-    margin: 0 auto;
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -495,4 +485,22 @@ image {
     padding-left: 24px;
     padding-right: 24px;
     border: 1px solid #EEEEEE;
+    border-top: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.nav-link.current {
+    color: var(--color-blue);
 }
