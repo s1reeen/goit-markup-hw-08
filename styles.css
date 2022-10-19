@@ -19,7 +19,7 @@ body {
 }
 
 header {
-    border-bottom: 1px solid #ECECEC; 
+    border-bottom: 1px solid #ECECEC;
 }
 
 .header-box {
@@ -36,15 +36,34 @@ header {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    display: block;
+    display: inline-block;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
 }
+
 
 .contacts:hover {
+    fill: var(--color-blue);
     color: var(--color-blue);
 }
 
-.contacts:focus {
-    color: var(--color-blue);
+.icon-contact.mail { 
+    width: 16px;
+    height: 12px;
+}
+
+.icon-contact.phone {
+    width: 10px;
+    height: 15px;
+}
+
+.icon-contact {
+    margin-right: 10px;
+}
+
+.team-li:not(:last-child) {
+    margin-right: 10px;
 }
 
 .nav-link {
@@ -53,15 +72,87 @@ header {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
-    
+}
+
+.links-social-network {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.links-box {
+    margin-left: 70px;
+    margin-top: 20px;
+}
+
+.title-links {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-white);
+}
+
+.team-svg {
+    fill: var(--color-gray);
+    display: flex;
+     height: 44px;
+    border-radius: 50%;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-svg:not(:last-child) {
+    margin-right: 10px;
+}
+
+.team-svg:hover {
+    fill: var(--color-white);
+    background-color: var(--color-blue);
+}
+
+.team-photo {
+    width: 20px;
+    height: 20px;
+}
+
+.team-cards {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .nav-link:hover {
     color: var(--color-blue);
-} 
+}
 
 .nav-link:focus {
     color: var(--color-blue);
+}
+
+.our-benefits-photo {
+    display: flex;
+    width: 70px;
+    height: 70px;
+}
+
+.benefits-background {
+    display: flex;
+    margin-bottom: 30px;
+    width: 270px;
+    height: 120px;
+    background-color: var(--color-brand);
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
 }
 
 .title {
@@ -93,8 +184,54 @@ header {
     display: block;
     margin: 0 auto;
 }
+
+.our-customers-title {
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-top: 94px;
+}
+
+.our-customers-ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 94px;
+    gap: 30px;
+}
+
+.our-customers-photo {
+    width: 106px;
+    height: 60px;
+}
+
+.our-customers-svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: #afb1b8;
+    width: 170px;
+    height: 90px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+}
+
+.our-customers-svg:hover {
+    fill: var(--color-blue);
+    border-color: var(--color-blue);
+}
+
 .main-button:hover {
     background-color: #237bc4;
+}
+
+.foot-div {
+    display: inline-flex;
 }
 
 footer {
@@ -119,14 +256,6 @@ footer {
     letter-spacing: 0.03em;
 }
 
-.contacts {
-    color: var(--color-gray);
-    text-decoration: none;
-}
-
-.contacts:hover {
-    color: var(--color-blue);
-}
 
 ul {
     list-style: none;
@@ -143,6 +272,20 @@ ul {
     justify-content: center;
 }
 
+.foot-svg {
+    fill: var(--color-white);
+    display: flex;
+    height: 44px;
+    border-radius: 50%;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.foot-svg:hover {
+    background-color: var(--color-blue);
+}
 
 .team {
     gap: 30px;
@@ -186,7 +329,7 @@ ul {
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.03em;
-    text-transform: uppercase;    
+    text-transform: uppercase;
     color: #212121;
 }
 
@@ -213,7 +356,7 @@ ul {
 .portfolio-button:focus {
     background-color: var(--color-blue);
     color: var(--color-white);
-}                      
+}
 
 .top-logo {
     font-family: 'Raleway';
@@ -236,7 +379,7 @@ ul {
 }
 
 .main-title {
-    background-color: var(--color-gray2);
+        background-image: url(images/imgoverlay.png), url(images/imgbackground.jpg);
     display: flex;
     padding: 200px 0;
     flex-direction: column;
@@ -277,7 +420,7 @@ ul {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.18;   
+    line-height: 1.18;
     letter-spacing: 0.03em;
     color: var(--color-blackgray);
 }
@@ -330,7 +473,7 @@ ul {
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 0.03em;
-     color: var(--color-gray);
+    color: var(--color-gray);
 }
 
 .nav-links li {
@@ -348,7 +491,7 @@ ul {
     display: flex;
     gap: 50px;
     margin-left: auto;
-    
+
 }
 
 .top-navigation {
@@ -385,14 +528,16 @@ ul {
 .what-we-do {
     text-align: center;
     padding-bottom: 100px;
-    
+
 }
 
 .features-images {
     display: flex;
     justify-content: center;
     gap: 30px;
+    margin-top: 50px;
 }
+
 
 .container-class {
     background-color: var(--color-white);
@@ -411,14 +556,14 @@ ul {
 .button {
     padding: 6px 22px;
     font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.6;
-        text-align: center;
-        letter-spacing: 0.03em;
-        border-radius: 4px;
-        cursor: pointer;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0.03em;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 button {
@@ -426,16 +571,16 @@ button {
     border-radius: 4px;
 }
 
-    .gallery-card {
+.gallery-card {
     width: 370px;
-    height: 404px;   
+    height: 404px;
     background: #FFFFFF;
 }
 
 .cards-list {
     width: 1170px;
-    margin-right: 30px ;
-    margin-bottom: 30px ;
+    margin-right: 30px;
+    margin-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -460,6 +605,10 @@ button {
     line-height: 2;
     letter-spacing: 0.06em;
     text-align: start;
+}
+
+.gallery-card:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .hidden-h2 {
