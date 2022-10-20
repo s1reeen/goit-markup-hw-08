@@ -48,6 +48,11 @@ header {
     color: var(--color-blue);
 }
 
+.contacts:focus {
+    fill: var(--color-blue);
+    color: var(--color-blue);
+}
+
 .icon-contact.mail { 
     width: 16px;
     height: 12px;
@@ -83,7 +88,6 @@ header {
 
 .links-box {
     margin-left: 70px;
-    margin-top: 20px;
 }
 
 .title-links {
@@ -99,7 +103,7 @@ header {
 }
 
 .team-svg {
-    fill: var(--color-gray);
+    fill: #AFB1B8;
     display: flex;
      height: 44px;
     border-radius: 50%;
@@ -113,6 +117,11 @@ header {
 }
 
 .team-svg:hover {
+    fill: var(--color-white);
+    background-color: var(--color-blue);
+}
+
+.team-svg:focus {
     fill: var(--color-white);
     background-color: var(--color-blue);
 }
@@ -194,14 +203,17 @@ header {
     line-height: 42px;
     text-align: center;
     letter-spacing: 0.03em;
-    margin-top: 94px;
+}
+
+.our-customers {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .our-customers-ul {
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    margin-bottom: 94px;
     gap: 30px;
 }
 
@@ -226,12 +238,18 @@ header {
     border-color: var(--color-blue);
 }
 
+.our-customers-svg:focus {
+    fill: var(--color-blue);
+    border-color: var(--color-blue);
+}
+
 .main-button:hover {
     background-color: #237bc4;
 }
 
 .foot-div {
-    display: inline-flex;
+    display: flex;
+    align-items: baseline;
 }
 
 footer {
@@ -284,6 +302,10 @@ ul {
 }
 
 .foot-svg:hover {
+    background-color: var(--color-blue);
+}
+
+.foot-svg:focus {
     background-color: var(--color-blue);
 }
 
@@ -346,16 +368,19 @@ ul {
     padding-right: 22px;
     padding-top: 6px;
     padding-bottom: 6px;
+    cursor: pointer;
 }
 
 .portfolio-button:hover {
     background-color: var(--color-blue);
     color: var(--color-white);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-button:focus {
     background-color: var(--color-blue);
     color: var(--color-white);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .top-logo {
@@ -373,22 +398,22 @@ ul {
 
 }
 
-
 .top-logo-color {
     color: var(--color-blue);
 }
 
 .main-title {
-        background-image: url(images/imgoverlay.png), url(images/imgbackground.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/imgbackground.jpg);
     display: flex;
     padding: 200px 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 1600px;
+    max-width: 1600px;
     padding-top: 200px;
     margin-left: auto;
     margin-right: auto;
+    background-position: center;
 }
 
 .title-middle {
@@ -607,7 +632,16 @@ button {
     text-align: start;
 }
 
-.gallery-card:hover {
+.gallery-link {
+    display: block;
+    text-decoration: none;
+}
+
+.gallery-link:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.gallery-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
