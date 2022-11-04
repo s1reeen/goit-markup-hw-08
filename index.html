@@ -112,14 +112,29 @@
         <div class="container">
           <h2 class="title-middle">Чим ми займаємося</h2>
           <ul class="features-images">
-            <li><img src="images/img.jpg" alt="Програмiст кодить" width="370" /></li>
-            <li><img src="images/img2.jpg" alt="Прошрамiст смотить у телефон" width="370" /></li>
             <li>
-              <img
-                src="images/img3.jpg"
-                alt="Програмiст смотрить у планшет с кольорами"
-                width="370"
-              />
+              <div class="card-thumb">
+                <img src="images/img.jpg" alt="Програмiст кодить" width="370" />
+                <div class="overlay">
+                  <p class="overlay-text">Десктопні додатки</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-thumb">
+                <img src="images/img2.jpg" alt="Програмiст кодить" width="370" />
+                <div class="overlay">
+                  <p class="overlay-text">Мобільні додатки</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card-thumb">
+                <img src="images/img3.jpg" alt="Програмiст кодить" width="370" />
+                <div class="overlay">
+                  <p class="overlay-text">Дизайнерські рішення</p>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -361,5 +376,16 @@
         </div>
       </div>
     </footer>
+    <div class="modal">
+      dd
+      <div class="modal-window">
+        <button class="close-button" data-toggle-backdrop-sign>
+          <svg class="features-icon" height="11" width="11">
+            <use href="./images/close.svg"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="overlay1"></div>
+    </div>
   </body>
 </html>
