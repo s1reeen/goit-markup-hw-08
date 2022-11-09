@@ -13,7 +13,6 @@
     --logo-company-color: #afb1b8;
 }
 
-/* Общее */
 body {
     color: var(--primary-text-color);
     background-color: var(--primery-bg-color);
@@ -23,7 +22,7 @@ body {
     letter-spacing: 0.03em;
 }
 
-/* Скрыть */
+
 .visually-hidden {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);
@@ -35,20 +34,17 @@ body {
     overflow: hidden;
 }
 
-/* списки */
 .list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-/* ссылки */
 .link {
     text-decoration: none;
 }
 
-/* заголовки */
-.titel {
+.title {
     color: var(--titel-link-color);
 
     font-weight: 700;
@@ -57,12 +53,11 @@ body {
     text-align: center;
 }
 
-h2.titel {
+h2.title {
     margin-top: 0;
     margin-bottom: 50px;
 }
 
-/* контейнер */
 .container {
     margin-right: auto;
     margin-left: auto;
@@ -71,7 +66,6 @@ h2.titel {
     padding-right: 15px;
 }
 
-/* Шапка сайта */
 .header {
     border-bottom: 1px solid #ececec;
 }
@@ -92,7 +86,6 @@ h2.titel {
     padding: 0px;
 }
 
-/* Логотип */
 .logo {
     margin-right: 93px;
 
@@ -114,7 +107,6 @@ h2.titel {
     color: var(--accent-color);
 }
 
-/* Навигация сайта */
 .nav>.list .link {
     display: block;
     padding-top: 32px;
@@ -155,7 +147,6 @@ h2.titel {
     border-radius: 2px;
 }
 
-/* контакты */
 .contacts.list {
     display: flex;
     align-items: center;
@@ -237,7 +228,6 @@ h2.titel {
     background-image: url(../img/close.svg);
 }
 
-/* Блок герой */
 .hero {
     padding: 200px 0;
     margin-right: auto;
@@ -255,7 +245,7 @@ h2.titel {
     justify-content: center;
 }
 
-.hero-titel {
+.hero-title {
     margin-top: 0px;
     margin-bottom: 30px;
 
@@ -289,11 +279,11 @@ h2.titel {
 
 .button:hover,
 .button:focus {
-    color: var(--accent-color);
-    background-color: var(--primary-bg-color);
+    color: var(--address-color);
+    background-color: #3584c5;
 }
 
-/* Блок Наши приимущества */
+
 .advantages {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -303,7 +293,7 @@ h2.titel {
     display: flex;
 }
 
-.advantages .titel {
+.advantages .title {
     margin-top: 0px;
     margin-bottom: 10px;
 
@@ -337,7 +327,6 @@ h2.titel {
     background-color: var(--secondary-bg-color);
 }
 
-/* Блок Work  */
 .work {
     padding-bottom: 94px;
 }
@@ -378,7 +367,6 @@ h2.titel {
     background-color: rgba(47, 48, 58, 0.8);
 }
 
-/* Блок Каманда */
 .team {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -401,7 +389,7 @@ h2.titel {
     border-radius: 0px 0px 4px 4px;
 }
 
-.card>.titel {
+.card>.title {
     padding-top: 30px;
     margin: 0;
     margin-bottom: 10px;
@@ -450,7 +438,7 @@ h2.titel {
     fill: var(--primary-bg-color);
 }
 
-/* клиенты */
+
 .clients {
     padding-bottom: 94px;
     padding-top: 94px;
@@ -484,7 +472,7 @@ h2.titel {
     border-color: var(--accent-color);
 }
 
-/* Футер */
+
 .footer {
     background-color: var(--footer-hero-bg-color);
 
@@ -561,7 +549,6 @@ h2.titel {
     text-transform: uppercase;
 }
 
-/* Портфолио */
 .galerry {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -581,7 +568,6 @@ h2.titel {
     margin-right: 8px;
 }
 
-/* кнопки галереии */
 .galerry-button {
     padding: 6px 22px;
     border-radius: 4px;
@@ -604,7 +590,6 @@ h2.titel {
     background-color: var(--accent-color);
 }
 
-/* Карты галереи */
 .galerry-card {
     color: var(--primary-text-color);
     font-size: 16px;
@@ -618,7 +603,7 @@ h2.titel {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.galerry-card .titel {
+.galerry-card .title {
     margin: 0;
     margin-bottom: 4px;
 
