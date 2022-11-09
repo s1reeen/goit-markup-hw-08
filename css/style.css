@@ -228,6 +228,21 @@ h2.title {
     background-image: url(../img/close.svg);
 }
 
+.map {
+    color: var(--color-white);
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.map-li {
+    padding-top: 20px;
+}
+
 .hero {
     padding: 200px 0;
     margin-right: auto;
