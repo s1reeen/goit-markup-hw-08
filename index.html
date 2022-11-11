@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DZ05</title>
+    <title>WebStudio</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -57,18 +57,84 @@
       <div class="modal">
         <button class="close" data-modal-close></button>
         <div class="form-wrapper p-40">
-         <b class="modal-title">
-              Залиште свої дані, ми вам передзвонимо
-            </b>
-            <form class="main-user-form">
-             <ul class="main-user-list">
-              <li class="main-user-item">
-            <input class="textfield" type="text" name="name" id="name" placeholder=" ">
-            <label class="form-label" for="name">Имя</label></li>
-             </ul>
-            <button type="submit" class="form-button">Відправити</button>
-            </form>
+          <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
+          <form class="main-user-form">
+            <!-- name input -->
+            <div class="input-wrapper user-name">
+              <label class="input-label small-top" for="user-name">Имя</label>
+              <div class="input-area-wrapper">
+                <input type="text" name="user-name" id="user-name" class="input-text user-name" autocomplete="name" />
+                <span class="input-icon">
+                  <svg class="icon-svg user-icon">
+                    <use href="./img/modal-svg.svg.svg#icon-Vector-7"></use>
+                  </svg>
+                </span>
+              </div>
             </div>
+
+            <!-- tel input -->
+            <div class="input-wrapper user-tel">
+              <label class="input-label small-top" for="user-tel">Телефон</label>
+              <div class="input-area-wrapper">
+                <input type="tel" name="user-tel" id="user-tel" class="input-text user-tel" autocomplete="tel" />
+                <span class="input-icon">
+                  <svg class="icon-svg phone-icon">
+                    <use href="./images/icons.svg#icon-phone"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <!-- email input -->
+            <div class="input-wrapper user-email">
+              <label class="input-label small-top" for="user-email">Почта</label>
+              <div class="input-area-wrapper">
+                <input
+                  type="email"
+                  name="user-email"
+                  id="user-email"
+                  class="input-text user-email"
+                  autocomplete="email"
+                />
+                <span class="input-icon">
+                  <svg class="icon-svg envelope-icon">
+                    <use href="./images/icons.svg#icon-envelope"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <!-- comment input -->
+            <div class="input-wrapper-1 user-comment">
+              <label class="input-label small-top" for="user-comment">Коментарий</label>
+              <textarea
+                class="input-text user-comment"
+                name="user-comment"
+                id="user-comment"
+                rows="7"
+                placeholder="Введите текст"
+              ></textarea>
+            </div>
+
+            <!-- checkbox input -->
+            <div class="input-wrapper user-aggrement">
+              <label class="input-label checkbox" for="user-aggrement">
+                <span>Соглашаюсь с рассылкой и принимаю</span>
+                <a href="#" class="label-link">Условия договора</a>
+                <input class="user-aggrement checkbox" type="checkbox" name="user-aggrement" id="user-aggrement" />
+                <span class="input-icon checkbox-icon">
+                  <svg class="icon-svg">
+                    <use href="./images/icons.svg#icon-checked"></use>
+                  </svg>
+                </span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn base-btn">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
       </div>
     </div>
     <main>
@@ -467,6 +533,17 @@
             </li>
           </ul>
         </div>
+              <div class="subscribe-box">
+                <p class="subscribe-text">Підпишіться на розсилку</p>
+                <input class="input-text email" type="email" name="user-email" id="user-email" placeholder="E-mail">
+                </div>
+                <button type="submit" class="subscribe-button">Підписатися
+                  <svg class="button-svg" width="24px"
+                  heigt="24px">
+                    <use href="./img/modal-svg.svg#icon-icon-send-1">
+                    </use>
+                  </svg>
+                </button>
       </div>
     </footer>
     <script src="./js/modal.js"></script>
