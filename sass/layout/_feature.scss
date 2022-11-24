@@ -1,0 +1,32 @@
+.feature-list {
+  @include flex-list;
+}
+
+.feature-list__item {
+  @include flex-item;
+}
+
+.feature-list__icon--fon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--set-gap);
+  background-color: var(--secondary-background);
+  border-radius: 4px;
+  padding: 25px 0px;
+}
+
+.feature-list__icon {
+  display: block;
+  width: 70px;
+  height: 70px;
+}
+
+.feature-list__subtitle {
+  margin-bottom: 10px;
+}
+
+.feature-list__text {
+  line-height: 1.71;
+  color: var(--secondary-text-color);
+}

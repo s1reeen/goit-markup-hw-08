@@ -1,0 +1,58 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: inherit;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.button {
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+body {
+  font: {
+    family: var(--main-font);
+    weight: 400;
+    size: 14px;
+  }
+  color: var(--text-color);
+  letter-spacing: 0.03em;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}

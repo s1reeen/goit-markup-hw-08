@@ -1,0 +1,35 @@
+.team-section {
+  background-color: var(--secondary-background);
+}
+
+.team-list {
+  @include flex-list;
+}
+
+.team-list-item {
+  @include flex-item;
+  background-color: var(--accessary-color);
+  box-shadow: var(--box-shadow-card);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.description-team {
+  padding: 30px 32px;
+}
+
+.text {
+  @include font($fs: 16px, $fw: 400, $lh: 19px);
+  text-align: center;
+}
+
+.team-subtitle {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+}
+
+.team-desc {
+  margin-bottom: 16px;
+
+  color: var(--secondary-text-color);
+}

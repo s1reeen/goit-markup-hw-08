@@ -1,0 +1,29 @@
+// UTILS
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/vishually-hidden';
+@import './utils/placeholder';
+
+// BASE
+@import './base/common';
+@import './base/conteiner';
+
+// COMPONENTS
+@import './components/logo';
+@import './components/title';
+@import './components/subtitle';
+@import './components/social-list';
+@import './components/filter-btn';
+@import './components/backdrop';
+@import './components/modal';
+@import './components/modal-form';
+
+// LAYOUT
+@import './layout/header';
+@import './layout/hero';
+@import './layout/feature';
+@import './layout/project';
+@import './layout/team';
+@import './layout/clients';
+@import './layout/footer';
+@import './layout/gallery';

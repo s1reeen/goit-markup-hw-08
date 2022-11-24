@@ -1,0 +1,31 @@
+.filter-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  &-item:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.filter-btn {
+  @include font($fw: 500, $lh: 26px);
+  padding: 6px 22px;
+
+  background-color: var(--secondary-background);
+  font-family: var(--main-font);
+  text-align: center;
+  color: var(--text-color);
+
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: var(--function-transition);
+
+  &--active,
+  &:focus,
+  &:hover {
+    color: var(--accessary-color);
+    background-color: var(--accent-color);
+    box-shadow: var(--box-shadow-filter);
+  }
+}

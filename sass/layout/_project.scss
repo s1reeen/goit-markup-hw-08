@@ -1,0 +1,25 @@
+.project {
+  padding-top: 0;
+}
+
+.project-list {
+  @include flex-list;
+}
+
+.project-list__item {
+  @include flex-item(calc(100% / 3 - var(--set-gap)));
+  position: relative;
+}
+
+.project-list__subtitle {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  background-color: rgba(47, 48, 58, 0.8);
+  text-align: center;
+  color: var(--accessary-color);
+}

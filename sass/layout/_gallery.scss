@@ -1,0 +1,68 @@
+.gallery-list {
+  @include flex-list;
+}
+
+.gallery-list-item {
+  @include flex-item(calc(100% / 3 - var(--set-gap)));
+}
+
+.gallery-subtitle {
+  @include font($fs: 18px, $fw: 700, $lh: 36px);
+  margin-bottom: 4px;
+  letter-spacing: 0.06em;
+  color: var(--text-color);
+}
+
+.gallery-desc {
+  @include font($fs: 16px, $fw: 400, $lh: 30px);
+  color: var(--secondary-text-color);
+}
+
+.description {
+  padding: 20px 24px;
+  background-color: var(--accessary-color);
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
+.gallery-link {
+  display: block;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accessary-color);
+    box-shadow: var(--box-shadow-gallery);
+    transition: backgroud-color 250ms var(--function-transition),
+      box-shadow 250ms var(--function-transition);
+  }
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  @include font($fs: 18px, $fw: 400, $lh: 28px);
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 250ms var(--function-transition), opacity 250ms var(--function-transition);
+
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+
+  color: var(--accessary-color);
+  background-color: rgba(33, 150, 243, 0.9);
+
+  .gallery-link:hover &,
+  .gallery-link:focus & {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
