@@ -1,0 +1,56 @@
+// Секция "Чем мы занимаемся"
+
+.photos {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+// Список секции
+
+.photos__list {
+  @extend %list;
+  display: flex;
+}
+
+// Элемент списка секции
+
+.photos__item {
+  width: calc((100% - 60px) / 3);
+
+  background-color: $primary-text-color;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+// Обёртка для картинки
+
+.photos__thumb {
+  position: relative;
+}
+
+// Текст поверх картинки
+
+.photos__text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  transform: translate(-50%, 0);
+
+  width: 100%;
+  height: 70px;
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  background-color: rgba(47, 48, 58, 0.8);
+
+  color: $primary-bg-color;
+
+  @include font(700, 14px, 1.14);
+  text-align: center;
+  text-transform: uppercase;
+}

@@ -1,11 +1,21 @@
+// Общий стиль лого
+
 .logo {
-  @include font($fs: 26px, $fw: 700, $lh: 31px);
-  margin-right: 93px;
+  font-family: $secondary-font;
+  @include font (700, 24px, 1.16);
+  text-decoration: none;
 
-  font-family: var(--secondary-font);
-  color: var(--text-color);
-
-  &--color {
-    color: var(--accent-color);
+  &__text {
+    color: $accent-color;
   }
+
+  @media screen and (min-width: 1200px) {
+    @include font (700, 26px, 1.19);
+  }
+}
+
+// Логотип в хедере
+
+.header__logo {
+  color: $second-text-color;
 }

@@ -1,0 +1,39 @@
+body {
+  background-color: $primary-bg-color;
+
+  color: $primary-text-color;
+
+  font-family: $primary-font;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.71;
+
+  // overflow-x: hidden;
+
+  &.modal-open {
+    overflow: hidden;
+  }  
+  
+  @media screen and (max-width: 767px) {
+    padding-top: 60px;
+  }
+}
+
+// Убирает лишние отступы у картинок снизу + добавляет отзывчивость
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

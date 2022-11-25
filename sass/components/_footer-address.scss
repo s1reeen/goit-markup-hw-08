@@ -1,0 +1,72 @@
+// Общий ьлок с адресом и лого в футере
+
+.address-block {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 65px;
+  }
+}
+
+// Лого в футере
+
+.footer__logo {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: $primary-bg-color;
+}
+
+/* Контакты в футере */
+
+.adress {
+  font-style: normal;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// Улица в футере
+
+.adress__map {
+  margin-top: 0;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
+}
+
+// Список телефонов и почт
+
+.adress__list {
+  @extend %list;
+}
+
+// Элементы списка
+
+.adress__item {
+    &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+// Ссылка для элементов списка
+
+.adress__link {
+  color: rgba(255, 255, 255, 0.6);
+
+  text-decoration: none;
+
+  transition: color $transition-duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

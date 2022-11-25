@@ -1,0 +1,95 @@
+// Секция "Преимущества"
+
+.features {
+  padding-top: 60px;
+
+  @media screen and (max-width: 1199px) {
+    padding-bottom: 60px;
+  }
+}
+
+// Список секции
+
+.features__list {
+  @extend %list;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+// Элемент списка
+
+.features__item {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 1 * 30px) / 2);
+
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+    &:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+// Обертка для иконки с фоном
+
+.features__img {
+  margin-bottom: 30px;
+  padding: 25px;
+
+  background-color: $additional-background-color;
+
+  text-align: center;
+}
+
+// Иконка элемента
+
+.features__icon {
+  width: 70px;
+  height: 70px;
+}
+
+// Тайтл элемента
+
+.features__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  color: $second-text-color;
+
+  @include font(700, 14px, 1.17);
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+// Текст элемента
+
+.features__text {
+  margin-top: 0;
+  margin-bottom: 0;
+}

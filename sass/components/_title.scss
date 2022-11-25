@@ -1,5 +1,16 @@
-.title {
-  @include font($fs: 36px, $fw: 700, $lh: 42px);
-  margin-bottom: 50px;
+// Тайтл для секций
+
+.section__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  color: #212121;
+  @include font(700, 28px, 1.17);
+
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    @include font(700, 36px, 1.17);
+    margin-bottom: 50px;
+  }
 }

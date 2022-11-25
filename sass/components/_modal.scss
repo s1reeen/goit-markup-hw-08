@@ -1,46 +1,104 @@
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  height: 581px;
+// Бекдроп для модального окна
 
-  transition: transform 250ms var(--function-transition);
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
 
-  background-color: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  width: 100%;
+  height: 100%;
 
-  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.2);
 
-  .backdrop.is-hidden & {
-    transform: translate(-50%, -50%) scale(0.1);
+  transition: opacity $transition-duration $timing-function;
+
+  opacity: 1;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 93px 15px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    overflow-y: scroll;
   }
 }
 
-.close-btn {
+// Модальное окно
+
+.modal {
+  position: relative;
+  border-radius: 4px;
+
+  background-color: $primary-bg-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  transition: all $transition-duration $timing-function;
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.5);
+
+    @media screen and (max-width: 767px) {
+      transform: scale(0.5);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 450px;
+    height: auto;
+
+    transform: translate(-50%, -25%) scale(1);
+  }
+
+  @media screen and (min-width: 1200px) {
+    top: 50%;
+    width: 528px;
+
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+// Кнопка закрытия модального окна
+
+.modal__close-btn {
   position: absolute;
   top: 8px;
   right: 8px;
+
+  @include flexbox(center, center);
+
   width: 30px;
   height: 30px;
-  padding: 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  padding: 6px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background: transparent;
+
+  background-color: $primary-bg-color;
+
   cursor: pointer;
+}
 
-  transform: fill 250ms var(--function-transition);
+// Иконка для кнопки закрытия модального окна
 
-  &:hover,
-  &:focus {
-    fill: var(--accent-color);
+.modal__close-icon {
+  width: 18px;
+  height: 18px;
+
+  fill: #000000;
+
+  transition: fill $transition-duration $timing-function;
+
+  .modal__close-btn:hover &,
+  .modal__close-btn:focus & {
+    fill: $accent-color;
   }
 }

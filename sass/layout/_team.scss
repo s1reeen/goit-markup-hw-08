@@ -1,35 +1,104 @@
-.team-section {
-  background-color: var(--secondary-background);
+// Секция "Наша команда"
+
+.team {
+  background-color: $additional-background-color;
 }
 
-.team-list {
-  @include flex-list;
+// Список секции
+
+.team__list {
+  @extend %list;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+// Элемент списка
+
+.team__item {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+  background-color: $primary-bg-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 1 * 30px) / 2);
+
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+    &:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }
 
-.team-list-item {
-  @include flex-item;
-  background-color: var(--accessary-color);
-  box-shadow: var(--box-shadow-card);
-  border-radius: 0px 0px 4px 4px;
-}
+// Обёртка для контента элемента
 
-.description-team {
-  padding: 30px 32px;
-}
+.team__content {
+  padding-top: 30px;
+  padding-bottom: 24px;
 
-.text {
-  @include font($fs: 16px, $fw: 400, $lh: 19px);
   text-align: center;
 }
 
-.team-subtitle {
+// Тайтл элемента (имя сотрудника)
+
+.team__name {
+  margin-top: 0;
   margin-bottom: 10px;
 
-  font-weight: 500;
+  color: $second-text-color;
+
+  @include font(500, 16px, 1.18);
 }
 
-.team-desc {
+// Текст элемента (должность сотрудника)
+
+.team__text {
+  margin-top: 0;
   margin-bottom: 16px;
 
-  color: var(--secondary-text-color);
+  font-size: 16px;
+  line-height: 1.18;
+}
+
+// Список социальных сетей
+
+.social {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+}
+
+// Элемент списка социальных сетей
+
+.social__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+// Иконки соццальных сетей
+
+.social__icon {
+  .social__link:hover &,
+  .social__link:focus & {
+    fill: $primary-bg-color;
+  }
 }
