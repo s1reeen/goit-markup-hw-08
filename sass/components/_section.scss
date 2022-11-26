@@ -1,0 +1,23 @@
+/* title in section 3 and 4  */
+.img-section-title,
+.our-team-title,
+.partners-title {
+  /* position */
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  @include desktop {
+    margin-bottom: 50px;
+  }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+

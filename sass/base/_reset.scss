@@ -1,35 +1,28 @@
+/* links option (налаштування для посилать) */
+.link-options {
+  text-decoration: none;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-p {
+p,
+ul {
   margin: 0;
 }
 
-img,
-svg,
-video {
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
   display: block;
-  max-width: 100%;
+  min-width: 100%;
   height: auto;
-}
 
-ul {
-  @extend %list;
-}
-
-.hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  width: 100%;
 }

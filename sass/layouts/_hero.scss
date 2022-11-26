@@ -1,0 +1,53 @@
+// * налаштування тексту в variables.scss //
+.hero {
+  background-color: var(--background-color-additional);
+  background-image: var(--bg-gradient), url(../images/hero-mobile.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  /* @include retina {
+    background-image: var(--bg-gradient), url(../images/hero-mobile-2x.jpeg);
+  } */
+
+  padding: 118px 0;
+  @include mobile {
+    background-image: var(--bg-gradient), url(../images/hero-mobile-2x.jpeg);
+  }
+
+  @include tablet {
+    background-image: var(--bg-gradient), url(../images/hero-tablet.jpeg);
+
+    @include retina {
+      background-image: var(--bg-gradient), url(../images/hero-tablet-2x.jpeg);
+    }
+  }
+
+  @include desktop {
+    min-width: 1200px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: var(--bg-gradient), url(../images/hero-bg.jpeg);
+    /* background-size: 1600px; */
+    max-width: 1600px;
+    margin: 0 auto;
+
+    @include retina {
+      background-image: var(--bg-gradient), url(../images/hero-bg-2x.jpeg);
+    }
+  }
+}
+
+/* .hero-container{} */
+
+.hero-title {
+  /* position */
+  max-width: 696px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  display: flex;
+  justify-content: center;
+}

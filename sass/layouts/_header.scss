@@ -1,0 +1,238 @@
+/* =========================== HEADER (шапка сайта) ========================== */
+/* header navigation options (налаштування шапки) */
+.topbar {
+  border-bottom: 1px solid #ececec;
+  position: relative;
+
+  /* @include tablet {
+    display: contents;
+  } */
+}
+
+.topbar-flex {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+
+  @include tablet {
+    justify-content: center;
+  }
+}
+
+.topbar-navigation__list {
+  list-style: none;
+  display: flex;
+}
+
+/* ---------------------------- header navigation ---------------------------- */
+/* header navigation section options (налаштування секції навігації) */
+.topbar-navigation {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  @include desktop {
+    align-items: baseline;
+  }
+}
+
+.topbar-navigation__list {
+  gap: 50px;
+  display: none;
+
+  @include tablet {
+    display: inherit;
+    margin-left: 88px;
+  }
+  @include desktop {
+    margin-left: 93px;
+  }
+}
+
+/* header navigation list options (налаштування списку навігації) */
+.topbar-navigation__group {
+  @include desktop {
+    margin-top: 32px;
+  }
+}
+
+/* header navigation link options (налаштування рядків списку навігації) */
+// *- налаштування тексту в variables.scss //
+
+.topbar-navigation__link {
+  position: relative;
+
+  &:hover,
+  &:focus {
+    color: var(--text-hover-color);
+  }
+  @include desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.active-porfolio {
+  color: var(--text-hover-color);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -31px;
+    left: -2px;
+    width: 78px;
+    height: 4px;
+    background-color: var(--text-hover-color);
+    border-radius: 2px;
+    @include desktop {
+      bottom: 3px;
+      left: -3px;
+    }
+  }
+}
+
+.active-main {
+  color: var(--text-hover-color);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -31px;
+    left: -2px;
+    width: 48px;
+    height: 4px;
+    background-color: var(--text-hover-color);
+    border-radius: 2px;
+
+    @include desktop {
+      bottom: 3px;
+      left: -3px;
+    }
+  }
+}
+
+/* ----------------------------- header contacts ----------------------------- */
+
+/* header contacts list options (налаштування списку контактів) */
+
+.topbar-contacts__list {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 10px;
+
+  @include tablet {
+    display: flex;
+    margin-left: auto;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    gap: 30px;
+    margin-left: auto;
+  }
+}
+
+.topbar-contacts__group {
+  display: flex;
+}
+
+/* header contacts color and hover (налаштування контактів в шапці) */
+.topbar-contacts__link {
+  display: flex;
+  align-items: center;
+  fill: var(--paragraph-tex-color);
+
+  &:focus,
+  &:hover {
+    color: var(--text-hover-color);
+    fill: var(--text-hover-color);
+  }
+
+  @include tablet {
+  }
+
+  @include desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.topbar-contacts__icon {
+  margin-right: 10px;
+}
+
+.mobile-menu {
+  /* display: none; */
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--additional-text-color);
+  padding-left: 40px;
+  padding-bottom: 48px;
+  display: flex;
+  @include tablet {
+    display: none;
+  }
+}
+
+.mobile-active {
+  color: var(--text-hover-color);
+}
+
+.mobile-container {
+  display: flex;
+  justify-content: baseline;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile-nav__list,
+.mobile-contacts__list,
+.mobile-social {
+  list-style: none;
+}
+
+.mobile-nav__list,
+.mobile-contacts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.mobile-nav__list {
+  margin-top: 48px;
+}
+
+/* .mobile-nav__group {} */
+
+.mobile-social {
+  display: flex;
+  margin-top: 64px;
+  gap: 20px;
+}
+
+.mobile-social__link {
+  position: relative;
+}
+
+.mobile-social__item {
+  position: relative;
+}
+
+.mobile-social__item::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 22px;
+  background-color: rgba(33, 33, 33, 0.2);
+  right: -10px;
+}
+.mobile-social__item:last-child:after {
+  display: none;
+}

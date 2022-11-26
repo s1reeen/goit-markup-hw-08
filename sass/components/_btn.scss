@@ -1,0 +1,57 @@
+// hero button options
+// * налаштування тексту в variables.scss //
+.main-button {
+  background: var(--text-hover-color);
+  cursor: pointer;
+  /* height: 50px;
+  width: 220px; */
+  padding: 10px 24px;
+  border-radius: 4px;
+  border-style: none;
+  /* position */
+  position: relative;
+  overflow: hidden;
+  &:hover,
+  &:focus {
+    background: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  }
+}
+
+.mobile-menu-btn {
+  cursor: pointer;
+  border-style: none;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  background-color: transparent;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    fill: var(--text-hover-color);
+  }
+  @include tablet {
+    display: none;
+  }
+}
+
+.mobile-menu-close {
+  cursor: pointer;
+  border-style: none;
+  position: absolute;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  fill: var(--paragraph-tex-color);
+  background-color: transparent;
+
+  top: 10px;
+  right: 15px;
+
+  &:hover,
+  &:focus {
+    fill: var(--text-hover-color);
+  }
+}

@@ -1,0 +1,48 @@
+/* -==================== our-features (текст під банером) ==================== */
+.our-features {
+  padding: 60px 0;
+
+  @include desktop {
+    padding: 94px 0;
+  }
+}
+
+.our-features-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.our-features-group {
+  width: 100%;
+
+  @include tablet {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  @include desktop {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+}
+
+.our-icons-group {
+  width: 100%;
+  height: 120px;
+  border-radius: 4px;
+  background-color: var(--background-color-special);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.our-features-icon {
+  fill: var(--primery-text-color);
+}
+
+// *- налаштування тексту в variables.scss //
+.our-features-title,
+.img-label {
+  margin-bottom: 10px;
+}

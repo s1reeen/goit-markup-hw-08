@@ -1,6 +1,24 @@
-@import './vendors/normalize';
-@import './utils/module';
+@import "./utils/hidden";
+@import "./utils/mixin";
+@import "./utils/variables";
 
-@import './base/glob';
-@import './components/module';
-@import './layout/module';
+@import "./base/common";
+@import "./base/reset";
+@import "./components/container";
+
+@import "./components/btn";
+@import "./components/logo";
+@import "./components/social";
+@import "./components/section";
+@import "./components/modal";
+
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/our-features";
+@import "./layouts/img-section";
+@import "./layouts/our-team";
+@import "./layouts/partners";
+@import "./layouts/footer";
+
+@import "./layouts/portfolio-btn";
+@import "./layouts/portfolio-list";

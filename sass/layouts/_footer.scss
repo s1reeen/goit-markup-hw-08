@@ -1,0 +1,148 @@
+/* footer section options (налаштування підвалу) */
+.basement {
+  background-color: var(--background-color-additional);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.basement__subtitle {
+  margin-bottom: 20px;
+}
+
+.basement-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0;
+  }
+  
+}
+
+/* footer list options (налаштування списку в підвалі) */
+.basement-contacts {
+  margin-top: 20px;
+}
+
+.basement-contacts__list {
+  display: inline;
+  text-align: center;
+  list-style: none;
+
+  @include desktop {
+    text-align: left;
+  }
+}
+
+.basement-contacts__item {
+  display: block;
+  margin-bottom: 9px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// *- налаштування тексту в variables.scss //
+
+/* footer social options (налаштування соц-мереж в підвалі) */
+.basement-social {
+  display: block;
+  /* width: 206px; */
+  height: 80px;
+
+  @include tablet {
+    margin-left: 165px;
+  }
+
+  @include desktop {
+    margin-left: 70px;
+  }
+}
+
+// *- налаштування соц мереж в social.scss //
+
+// !- footer form  - basement-submit - /
+
+.basement-submit {
+  display: flex;
+  flex-direction: column;
+
+  @include mobile {
+    width: 450px;
+  }
+
+  @include tablet {
+    margin-top: 60px;
+  }
+
+  @include desktop {
+    width: 570px;
+    height: 86px;
+    margin-left: 93px;
+  }
+}
+
+.basement-submit__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  @include desktop {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+.basement-submit__label {
+  display: flex;
+}
+
+.basement-submit__input {
+  background-color: transparent;
+
+  align-content: center;
+  height: 50px;
+  width: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding-left: 16px;
+
+  @include mobile {
+    width: 450px;
+  }
+
+  @include desktop {
+    width: 358px;
+    margin-right: 12px;
+  }
+}
+
+// footer button options
+
+.basement-submit__button {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px;
+  padding: 10px 28px;
+  gap: 10px;
+}
+
+.basement-submit__icon {
+  fill: var(--background-color-special);
+}
