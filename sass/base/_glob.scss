@@ -1,0 +1,17 @@
+body {
+  background: getColor('primary-bg');
+  color: getColor('primary-text');
+
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $main-size;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+@import './reset';

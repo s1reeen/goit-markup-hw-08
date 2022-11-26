@@ -1,0 +1,19 @@
+.header {
+  border-bottom: 1px solid getColor('border');
+  color: getColor('ternary-text');
+
+  // Desktop styles
+  @include respond-from-min('tablet') {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    @include respond-to-max('tablet') {
+      justify-content: space-between;
+    }
+  }
+}

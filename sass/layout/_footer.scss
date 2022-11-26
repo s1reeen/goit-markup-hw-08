@@ -1,27 +1,54 @@
-// Футер
-
 .footer {
-  padding: 60px 0px;
+  background-color: getColor('ternary-bg');
+  color: getColorInverted('primary-text');
+  font-size: $main-size;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 
-  background-color: $second-bg-color;
+  padding-top: $pentadeca-gap_4x;
+  padding-bottom: $pentadeca-gap_4x;
 
-  color: $primary-bg-color;
+
+  &__container {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+
+    @include respond-from-min('tablet') {
+      display: flex;
+      flex-wrap: wrap;
+
+      justify-content: space-around;
+    }
+
+    @include respond-from-min('desktop') {
+      text-align: left;
+      flex-wrap: nowrap;
+
+      justify-content: start;
+    }
+  }
+
+  &__title {
+    margin-bottom: $deca-gap_2x;
+    font-weight: 700;
+    font-size: $main-size;
+    line-height: 1.42;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
 }
 
-// Обёртка для блоков в футере
+.address {
+  margin-bottom: $pentadeca-gap_4x;
 
-.footer-blocks {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  @include respond-from-min('tablet') {
+    margin-bottom: 0;
   }
 
-  @media screen and (max-width: 1199px) {
-    text-align: center;
-  }
-
-  @media screen and (min-width: 1200px) {
-    @include flexbox(space-between, baseline);
+  @include respond-from-min('desktop') {
+    width: 231px;
+    margin-right: $deca-gap_7x;
+    margin-bottom: 0;
   }
 }

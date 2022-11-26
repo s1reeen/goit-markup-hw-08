@@ -1,0 +1,39 @@
+.development {
+  display: none;
+
+  @include respond-from-min('desktop') {
+    @include centered-flex(flex);
+  }
+
+  padding-top: 0;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item + &__item {
+    margin-left: $pentadeca-gap_2x;
+  }
+
+  // Thumbs
+  &__desc {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 27px 0;
+    background-color: $dev-bg;
+  }
+
+  &__text {
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    color: getColorInverted('primary-text');
+  }
+}

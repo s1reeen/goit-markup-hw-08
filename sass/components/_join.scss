@@ -1,0 +1,30 @@
+.join {
+  margin-bottom: $pentadeca-gap_4x;
+  @include respond-from-min('tablet') {
+    margin-bottom: 0;
+  }
+  @include respond-from-min('desktop') {
+    width: 206px;
+    margin-right: $xeno-gap_f;
+  }
+
+  &__social {
+    display: flex;
+
+    @include respond-to-max('desktop') {
+      justify-content: center;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: $deca-gap_1x;
+  }
+
+  &__link {
+    background: $social-bg;
+  }
+
+  &__link .social__icon {
+    color: getColorInverted('primary-text');
+  }
+}

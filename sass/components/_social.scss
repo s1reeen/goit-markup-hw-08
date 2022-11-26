@@ -1,0 +1,31 @@
+.social {
+  display: flex;
+  justify-content: center;
+
+  &__item:not(:last-child) {
+    margin-right: $deca-gap_1x;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: getColor('ternary-buttons');
+    transition: background-color 250ms $cubic, color 250ms $cubic;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: getColorInverted('primary-text');
+    background-color: getColor('accent');
+  }
+
+  &__icon {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+  }
+}

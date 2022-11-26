@@ -1,0 +1,49 @@
+// Colours
+@function getColor($key: 'primary-text') {
+  @return map-get($colors-main, $key);
+}
+
+@function getColorInverted($key: 'primary-text') {
+  @return map-get($colors-inverted, $key);
+}
+
+@function getColorAlpha($name: 'primary-text', $opacity: 0) {
+  $color: getColor($name);
+
+  // Get the named opacity level, if it exists
+  @if map-key-exists($colors-opacity, $opacity) {
+    $opacity: map-get($colors-opacity, $opacity);
+  }
+
+  // Use rgba() to manipulate the color's alpha level
+  @return rgba($color, $opacity);
+}
+
+// Get width according to breakpoint
+@function getWidth($breakpoint) {
+  @if map-key-exists($breakpoints, $breakpoint) {
+    @return map-get($breakpoints, $breakpoint);
+  } @else {
+    @warn "No value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+// Get width of parent container
+@function flexContainerWidth(
+  $marginValue: 0,
+  $marginsCount: 2,
+  $elementsInRow: 0
+) {
+  @return calc((100% - #{$marginValue} * #{$marginsCount}) / #{$elementsInRow});
+}
+
+// Get width of child element
+@function flexElementWidth($marginValue: 0, $elementsInRow: 2) {
+  @return calc(100% / #{$elementsInRow} - #{$marginValue});
+}
+
+// return negative value in required units
+@function negativeMargin($pentadeca-gap) {
+  @return calc(-1 * #{$pentadeca-gap});
+}

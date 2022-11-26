@@ -1,0 +1,212 @@
+.menu {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  @include respond-from-min('tablet') {
+    display: flex;
+    justify-content: space-between;
+    margin-left: $deca-gap_9x;
+
+    width: 100vw;
+  }
+
+  .navigation {
+    display: none;
+
+    @include respond-from-min('tablet') {
+      display: block;
+    }
+  }
+  .contacts {
+    display: none;
+  }
+
+  &.is-open {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    padding: 48px $deca-gap_4x;
+
+    overflow-y: scroll;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: getColor('primary-bg');
+  }
+
+  &.is-open .navigation {
+    display: block;
+  }
+
+  // Contacts Mobile Styles
+  &.is-open .contacts {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: $hexadeca-gap_4x;
+  }
+
+  &.is-open .contacts__item:last-child {
+    margin-bottom: $hexadeca-gap_2x;
+  }
+
+  &.is-open .contacts__item:last-child .contacts__link {
+    color: getColor('accent');
+    font-size: $mobile-menu-phone;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+
+  &.is-open .contacts__item:not(:last-child) .contacts__link {
+    font-size: $mobile-menu-mail;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+  }
+
+  // Menu Social Links in Mobile only
+  .menu-social {
+    display: none;
+  }
+
+  &.is-open .menu-social {
+    display: flex;
+  }
+
+  &.is-open .menu-social__item:not(:last-child) {
+    margin-right: $deca-gap_1x;
+    padding-right: $deca-gap_1x;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+
+  .menu-social__link {
+    color: getColor('accent');
+    font-size: $mobile-menu-social;
+    line-height: 1.22;
+    text-decoration: none;
+  }
+
+  // Site Navigation Contacts Block
+  &__contacts {
+    @include respond-from-min('tablet') {
+      margin: $xeno-gap_b 0;
+    }
+    @include respond-from-min('desktop') {
+      margin: 0;
+    }
+  }
+
+  // Site Navigation Menu Block
+  &__list {
+    @include respond-from-min('tablet') {
+      display: flex;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: $hexadeca-gap_2x;
+    @include respond-from-min('tablet') {
+      margin-right: $deca-gap_5x;
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: getColor('secondary-text');
+    // transition: color 250ms $cubic;
+    @include transition(color);
+    text-decoration: none;
+
+    font-weight: 500;
+    font-size: $mobile-menu;
+    line-height: 1.17;
+
+    @include respond-from-min('tablet') {
+      position: relative;
+      display: block;
+      padding-top: $hexadeca-gap_2x;
+      padding-bottom: $hexadeca-gap_2x;
+
+      font-size: $main-size;
+      line-height: 1.14;
+    }
+  }
+
+  &__link--current,
+  &__link:hover,
+  &__link:focus {
+    color: getColor('accent');
+  }
+
+  // Blue bar
+  &__link--current::after {
+    @include respond-from-min('tablet') {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      display: block;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+
+      content: '';
+      background-color: getColor('accent');
+      // transition: opacity 250ms $cubic;
+      @include transition(opacity);
+      opacity: 1;
+    }
+  }
+
+  // Menu Button
+  &__button {
+    width: 40px;
+    height: 40px;
+
+    margin: 0;
+    @include centered-flex();
+
+    border: none;
+    background-color: transparent;
+
+    @include respond-from-min('tablet') {
+      display: none;
+    }
+  }
+
+  &__button:hover,
+  &__button:focus {
+    fill: getColor('accent');
+  }
+
+  &__button.is-open {
+    position: absolute;
+    z-index: 1;
+    top: $deca-gap_1x;
+    right: $pentadeca-gap_1x;
+  }
+
+  // Menu Button Icons
+  &__icon {
+    width: 24px;
+    height: 16px;
+  }
+
+  &__button .icon-cross {
+    display: none;
+  }
+
+  &__button.is-open .icon-cross {
+    display: block;
+    width: 11px;
+    height: 11px;
+  }
+
+  &__button.is-open .icon-burger {
+    display: none;
+  }
+}

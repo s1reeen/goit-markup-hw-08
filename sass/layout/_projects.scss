@@ -1,0 +1,110 @@
+.thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.project {
+  // Tablet styles
+  @include respond-from-min('tablet') {
+    display: flex;
+    flex-wrap: wrap;
+
+    max-width: getWidth('tablet');
+
+    margin-top: negativeMargin($pentadeca-gap_2x);
+    margin-left: negativeMargin($pentadeca-gap_2x);
+  }
+  // Desktop styles
+  @include respond-from-min('desktop') {
+    max-width: getWidth('desktop');
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__item {
+    @include respond-to-max('tablet') {
+      &:not(:first-child) {
+        margin-top: $pentadeca-gap_2x;
+      }
+    }
+
+    @include respond-from-min('tablet') {
+      flex-basis: flexElementWidth($pentadeca-gap_2x, 2);
+      margin-left: $pentadeca-gap_2x;
+      margin-top: $pentadeca-gap_2x;
+    }
+
+    @include respond-from-min('desktop') {
+      flex-basis: flexElementWidth($pentadeca-gap_2x, 3);
+    }
+  }
+
+  &__thumb {
+    display: block;
+    max-width: 100vw;
+    margin: 0;
+    height: auto;
+  }
+
+  &__container {
+    border: 1px solid getColor('border-box');
+    border-top: none;
+    margin-top: 0;
+    padding-top: $deca-gap_2x;
+    padding-bottom: $deca-gap_2x;
+    padding-left: $dodeca-gap_2x;
+  }
+
+  // Project text
+  &__title {
+    margin: 0;
+    color: getColor('secondary-text');
+    font-size: $ternary-size;
+    line-height: 2;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+
+  &__descriptioon {
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-size: $secondary-size;
+    line-height: 1.8;
+  }
+
+  // Animation
+  &__about {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px $dodeca-gap_2x;
+    background-color: $project-accent;
+
+    transform: translateY(100%);
+    opacity: 1;
+
+    transition: transform 250ms $cubic, opacity 250ms $cubic;
+
+    color: getColorInverted('primary-text');
+    font-size: $ternary-size;
+    line-height: 1.56;
+  }
+
+  &__item:hover {
+    // transition: box-shadow 250ms $cubic;
+    @include transition(box-shadow);
+
+    box-shadow: 0px 1px 1px $shadow-12, 0px 4px 4px $shadow-06,
+      1px 4px 6px $shadow-16;
+  }
+
+  &__item:hover &__about {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

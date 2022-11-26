@@ -1,21 +1,32 @@
-// Общий стиль лого
-
 .logo {
-  font-family: $secondary-font;
-  @include font (700, 24px, 1.16);
+  display: block;
   text-decoration: none;
-
-  &__text {
-    color: $accent-color;
+  color: inherit;
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: $logo-mobile-size;
+  line-height: 1.16;
+  @include respond-from-min('desktop') {
+    font-size: $logo-size;
+    line-height: 1.2;
   }
 
-  @media screen and (min-width: 1200px) {
-    @include font (700, 26px, 1.19);
+  &--accent {
+    color: getColor('accent');
   }
-}
 
-// Логотип в хедере
+  // Header Logo
+  .header__container & {
+    padding-top: $hexadeca-gap_1x;
+    padding-bottom: $hexadeca-gap_1x;
+    @include respond-from-min('tablet') {
+      padding-top: $dodeca-gap_2x;
+      padding-bottom: $dodeca-gap_2x;
+    }
+  }
 
-.header__logo {
-  color: $second-text-color;
+  // Footer Logo
+  .address & {
+    margin-bottom: $deca-gap_2x;
+  }
 }

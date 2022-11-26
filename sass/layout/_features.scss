@@ -1,95 +1,79 @@
-// Секция "Преимущества"
-
 .features {
-  padding-top: 60px;
+  max-width: getWidth('mobileBox');
+  margin-right: auto;
+  margin-left: auto;
 
-  @media screen and (max-width: 1199px) {
-    padding-bottom: 60px;
-  }
-}
-
-// Список секции
-
-.features__list {
-  @extend %list;
-
-  @media screen and (min-width: 768px) {
+  // Tablet styles
+  @include respond-from-min('tablet') {
     display: flex;
     flex-wrap: wrap;
+
+    max-width: getWidth('tablet');
+
+    margin-top: negativeMargin($pentadeca-gap_2x);
+    margin-left: negativeMargin($pentadeca-gap_2x);
+  }
+  // Desktop styles
+  @include respond-from-min('desktop') {
+    max-width: getWidth('desktop');
+
+    margin-top: 0;
   }
 
-  @media screen and (min-width: 1200px) {
+  &__item {
+    @include respond-to-max('tablet') {
+      &:not(:first-child) {
+        margin-top: $pentadeca-gap_2x;
+      }
+    }
+
+    @include respond-from-min('tablet') {
+      flex-basis: flexElementWidth($pentadeca-gap_2x, 2);
+      margin-left: $pentadeca-gap_2x;
+      margin-top: $pentadeca-gap_2x;
+    }
+
+    @include respond-from-min('desktop') {
+      flex-basis: flexElementWidth($pentadeca-gap_2x, 4);
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: $deca-gap_1x;
+    color: getColor('secondary-text');
+    font-size: $main-size;
+    line-height: 1.14;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include respond-from-min('tablet') {
+      text-align: left;
+    }
+  }
+
+  &__description {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  // Icons
+  &__icon-wrapper {
     display: flex;
-  }
-}
+    justify-content: center;
+    align-items: center;
 
-// Элемент списка
-
-.features__item {
-  @media screen and (max-width: 767px) {
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
+    background-color: getColor('secondary-bg');
+    border-radius: 4px;
+    margin-bottom: $pentadeca-gap_2x;
+    padding: 25px 0;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    width: calc((100% - 1 * 30px) / 2);
-
-    &:not(:nth-last-child(-n + 2)) {
-      margin-bottom: 30px;
-    }
-    &:not(:nth-child(2n)) {
-      margin-right: 30px;
-    }
+  &__icon {
+    width: 70px;
+    height: 70px;
   }
-
-  @media screen and (min-width: 1200px) {
-    width: calc((100% - 90px) / 4);
-
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
-  }
-}
-
-// Обертка для иконки с фоном
-
-.features__img {
-  margin-bottom: 30px;
-  padding: 25px;
-
-  background-color: $additional-background-color;
-
-  text-align: center;
-}
-
-// Иконка элемента
-
-.features__icon {
-  width: 70px;
-  height: 70px;
-}
-
-// Тайтл элемента
-
-.features__title {
-  margin-top: 0;
-  margin-bottom: 10px;
-
-  color: $second-text-color;
-
-  @include font(700, 14px, 1.17);
-  text-align: center;
-  text-transform: uppercase;
-
-  @media screen and (min-width: 768px) {
-    text-align: left;
-  }
-}
-
-// Текст элемента
-
-.features__text {
-  margin-top: 0;
-  margin-bottom: 0;
 }

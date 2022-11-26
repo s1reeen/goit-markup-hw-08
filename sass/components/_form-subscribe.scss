@@ -1,0 +1,58 @@
+.spam {
+  @include respond-from-min('tablet') {
+    margin-top: $pentadeca-gap_4x;
+  }
+  @include respond-from-min('desktop') {
+    margin-top: 0;
+  }
+}
+
+.form-subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include respond-from-min('desktop') {
+    flex-direction: row;
+  }
+
+  &__input {
+    width: 100%;
+    margin-bottom: $deca-gap_2x;
+    @include respond-from-min('tablet') {
+      width: getWidth('mobileBox');
+    }
+    @include respond-from-min('desktop') {
+      width: 358px;
+      margin-right: $dodeca-gap_1x;
+      margin-bottom: 0;
+    }
+    padding: $pentadeca-gap_1x $hexadeca-gap_1x;
+
+    background-color: transparent;
+    border: 1px solid $border-medium;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px $shadow-button);
+    border-radius: 4px;
+
+    color: $footer-links-color;
+    font-size: $secondary-size;
+    line-height: 1.25;
+  }
+
+  &__input:focus {
+    color: getColor('primary-bg');
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    padding: $xeno-gap_a $xeno-gap_d;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    margin-left: $deca-gap_1x;
+    fill: getColor('primary-bg');
+  }
+}

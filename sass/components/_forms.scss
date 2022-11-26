@@ -1,0 +1,121 @@
+.order-form {
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+
+  &__label {
+    margin-bottom: $deca-gap_1x;
+  }
+
+  &__textarea {
+    margin-bottom: $deca-gap_2x;
+  }
+
+  &__title {
+    font-size: $minor-size;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+  }
+
+  &__box {
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    padding: $xeno-gap_0 $dodeca-gap_1x;
+    padding-left: $xeno-gap_e;
+    border: 1px solid $modal-form-border;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  &__input-icon {
+    position: absolute;
+    top: 50%;
+    left: $dodeca-gap_1x;
+    transform: translateY(-50%);
+
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    fill: getColor('secondary-text');
+  }
+
+  &__comment {
+    width: 100%;
+    height: 120px;
+    padding: $dodeca-gap_1x $hexadeca-gap_1x;
+    resize: none;
+
+    border: 1px solid $modal-form-border;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  &__comment::placeholder {
+    font-size: $minor-size;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+
+    color: $comment-placeholder;
+  }
+
+  &__comment:focus,
+  &__input:focus,
+  &__input:focus + .input-icon {
+    fill: getColor('accent');
+    border-color: getColor('accent');
+  }
+
+  &__policy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: $pentadeca-gap_2x;
+    line-height: 1.71;
+  }
+
+  // Checkbox
+  &__checkbox {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  &__checkbox-icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    border: 2px solid getColor('secondary-text');
+    border-radius: 2px;
+  }
+
+  &__checkbox:focus + &__checkbox-icon,
+  &__checkbox:checked + &__checkbox-icon {
+    border-color: transparent;
+    background-color: getColor('accent');
+    background-image: url('../images/icons/check.svg');
+    background-origin: border-box;
+    background-size: contain;
+  }
+
+  &__text {
+    font-size: $minor-size;
+    line-height: 1.16;
+  }
+
+  &__link {
+    color: getColor('accent');
+  }
+
+  & .button {
+    width: 200px;
+    align-self: center;
+    box-shadow: 0px 4px 4px $shadow-button;
+  }
+}
